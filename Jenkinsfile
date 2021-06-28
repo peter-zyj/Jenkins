@@ -2,19 +2,22 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Build_Geneve') {
             steps {
-                echo 'Building..'
+                echo 'Platform: '
+                echo 'Test Version: '
+                echo 'Test Product: '
+                echo 'Build Test Bed'
             }
         }
-        stage('Test') {
+        stage('Test_Geneve') {
             steps {
-                echo 'Testing..'
+                echo 'Run Pytest'
             }
         }
-        stage('Deploy') {
+        stage('Report_Geneve') {
             steps {
-                echo 'Deploying....'
+                echo 'Upload Test Result to InfluxDB'
             }
         }
     }
